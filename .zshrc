@@ -4,15 +4,15 @@ clear
 if command -v ssh-agent &> /dev/null; then
   figlet -lt github | lolcat -f
   eval "$(ssh-agent -s)"
-fi
 
-SSH_ME=$HOME/.ssh/id_me
-if [ -e $SSH_ME ]; then
-  ssh-add $SSH_ME
-fi
-SSH_UNI=$HOME/.ssh/id_uni
-if [ -e $SSH_UNI ]; then
-  ssh-add $SSH_UNI
+  SSH_ME=$HOME/.ssh/id_me
+  if [ -e $SSH_ME ]; then
+    ssh-add $SSH_ME
+  fi
+  SSH_UNI=$HOME/.ssh/id_uni
+  if [ -e $SSH_UNI ]; then
+    ssh-add $SSH_UNI
+  fi
 fi
 
 PROJECT_AUTOINIT=$HOME/projectAutoInit/create.sh
@@ -146,13 +146,6 @@ export FZF_DEFAULT_OPTS='--height 40% --reverse'
 # Reload .zshrc with an alias
 alias reload="source $HOME/.zshrc"
 
-# Execute dotfiles bootstrap
-alias dotstrap="curl -s https://raw.githubusercontent.com/hugoogb/dotfiles/master/bootstrap.sh | bash"
-# Clone and update all my repos
-alias cloneall="curl -s https://raw.githubusercontent.com/hugoogb/clone-all-repos/master/clone.sh | bash"
-# Install all arch programs
-alias archinstall="curl -s https://raw.githubusercontent.com/hugoogb/arch-install/master/installation.sh | bash"
-
 # System aliases
 alias distro="cat /etc/*-release | head -1 | tail -1 | cut -d= -f2"
 
@@ -160,12 +153,14 @@ alias distro="cat /etc/*-release | head -1 | tail -1 | cut -d= -f2"
 
 # Custom aliases
 alias show="tree ."
-# alias rm="rm -v"
-# alias 'rm -rf'="rm -rfv"
-# alias mv="mv -v"
-# alias cp="cp -v"
-# alias mkdir="mkdir -pv"
-alias path="echo -e ${PATH//:/\\n}"
+alias path="echo -e ${PATH//:/\\::}"
+
+# Util
+alias rm="rm -v"
+alias 'rm -rf'="rm -rfv"
+alias mv="mv -v"
+alias cp="cp -v"
+alias mkdir="mkdir -pv"
 
 # Navigate through dirs history
 d='dirs -v | head -10'
@@ -205,16 +200,6 @@ alias :q="exit"
 # alias ggl="git pull origin $(current_branch)"
 # alias ggp="git push origin $(current_branch)"
 # alias gcf="git config --list"
-
-# Generate pacman pkg list and AUR pkg list
-pkgen() {
-  # Pacman pkg list
-  pacman -Qqen > $HOME/arch-install/pkglist/pacman-pkglist.txt
-  # AUR pkg list
-  pacman -Qqem > $HOME/arch-install/pkglist/yay-pkglist.txt
-
-  echo "Package lists generated!!!"
-}
 
 # Init starship zsh theme
 eval "$(starship init zsh)"

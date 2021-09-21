@@ -1,0 +1,8 @@
+/*
+!.gitignore
+!README.md
+
+!shell-setup.sh
+!.bashrc
+!.zshrc
+!starship.toml

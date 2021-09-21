@@ -79,7 +79,7 @@ update_repo() {
 }
 
 clone_repo() {
-  if [ -d $REPO_DIR]; then
+  if [ -d $REPO_DIR ]; then
     warn "WARNING: $REPO directory already exists"
   else
     info "Cloning $REPO..."

@@ -79,11 +79,11 @@ update_repo() {
 }
 
 clone_repo() {
-  if [ ! -d $REPO_DIR ]; then
+  if [ -d $REPO_DIR ]; then
+    warn "WARNING: $REPO directory already exists"
+  else
     info "Cloning $REPO..."
     git clone https://github.com/hugoogb/$REPO.git $REPO_DIR
-  else
-    warn "WARNING: $REPO directory already exists"
   fi
 
   update_repo

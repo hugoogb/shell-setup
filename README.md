@@ -2,10 +2,10 @@
 
 ## Required software
 
-In order to get this config installed properly we need to have previously installed some stuff: `curl`, `git`, `zsh`, `fzf` and optionals like `neofetch`, `tree` and `neovim`.
+In order to get this config installed properly we need to have previously installed some stuff: `curl`, `git`, `zsh` and optionals (but used in my setup files) like `neofetch`, `tree` and `neovim`.
 
 ```sh
-sudo apt install curl git zsh fzf tree neovim neofetch
+sudo apt install curl git zsh tree neovim neofetch
 ```
 
 ## Clone and execute script

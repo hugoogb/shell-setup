@@ -4,7 +4,7 @@
 
 In order to get this config installed properly we need to have previously installed some stuff: `curl`, `git`, `zsh`, `fzf` and optionals like `tree` and `nvim`.
 
-```
+```sh
 sudo apt install curl git zsh fzf tree nvim
 ```
 

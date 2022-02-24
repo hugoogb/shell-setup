@@ -8,7 +8,7 @@ cd $HOME
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
+#export ZSH="$HOME/.oh-my-zsh"
 
 # starship config file path
 export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"
@@ -86,10 +86,8 @@ export NPM_CONFIG_PREFIX="$HOME/.npm-global/bin"
 setopt globdots
 
 # fzf settings
-export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -l -g ""'
-# export FZF_DEFAULT_COMMAND='rg --files --hidden -g "!.git" "!.npm" '
-# export FZF_DEFAULT_COMMAND='find .'
-export FZF_DEFAULT_OPTS='--height 40% --reverse'
+#export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -l -g ""'
+#export FZF_DEFAULT_OPTS='--height 40% --reverse'
 
 # export MANPATH="/usr/local/man:$MANPATH"
 

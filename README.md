@@ -2,10 +2,10 @@
 
 ## Required software
 
-In order to get this config installed properly we need to have previously installed some stuff: `curl`, `git`, `zsh`, `fzf` and optionals like `tree` and `nvim`.
+In order to get this config installed properly we need to have previously installed some stuff: `curl`, `git`, `zsh`, `fzf` and optionals like `neofetch`, `tree` and `neovim`.
 
 ```sh
-sudo apt install curl git zsh fzf tree nvim
+sudo apt install curl git zsh fzf tree neovim neofetch
 ```
 
 ## Clone and execute script
@@ -21,6 +21,7 @@ git clone https://github.com/hugoogb/shell-setup.git ~/shell-setup
 ### Bootstrap script
 
 ```sh
-chmod u+x ~/shell-setup/shell-setup.sh
 . ~/shell-setup/shell-setup.sh
 ```
+
+If it does not execute you may need to give permissions to the script: `chmod u+x ~/shell-setup/shell-setup.sh`

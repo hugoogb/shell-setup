@@ -51,18 +51,6 @@ ACTUAL_DIR=`pwd`
 REPO_DIR=$HOME/$REPO
 CONFIG_DIR=$HOME/.config
 
-if [ ! -d $TEMP_DIR ]; then
-  mkdir $TEMP_DIR
-fi
-
-if [ ! -d $CONFIG_DIR ]; then
-  mkdir $CONFIG_DIR
-fi
-
-ok "Welcome to @hugoogb $REPO!!!"
-info "Starting process..."
-
-sleep 0.5
 
 # Installing oh-my-zsh
 ohmyzsh_install() {
@@ -75,14 +63,14 @@ ohmyzsh_install() {
   git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
   git clone https://github.com/supercrabtree/k ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/k
   git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-
-  info "Installing starship..."
-
-  sh -c "$(curl -fsSL https://starship.rs/install.sh)"
 }
 
 # Linking dotfiles
 shell_config() {
+  info "Installing starship..."
+
+  sh -c "$(curl -fsSL https://starship.rs/install.sh)"
+
   info "Setting up $REPO (bash,zsh,starship,etc)..."
 
   # Link .bashrc
@@ -100,11 +88,24 @@ shell_config() {
 }
 
 shell_setup() {
-  ohmyzsh_install
+  #ohmyzsh_install
   shell_config
 }
 
 main() {
+  if [ ! -d $TEMP_DIR ]; then
+    mkdir $TEMP_DIR
+  fi
+
+  if [ ! -d $CONFIG_DIR ]; then
+    mkdir $CONFIG_DIR
+  fi
+
+  ok "Welcome to @hugoogb $REPO!!!"
+  info "Starting process..."
+
+  sleep 0.8
+
   shell_setup
 }
 

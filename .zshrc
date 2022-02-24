@@ -1,27 +1,5 @@
 clear
 
-# Start ssh agent
-if command -v ssh-agent &> /dev/null; then
-  figlet -lt github | lolcat -f
-  eval "$(ssh-agent -s)"
-
-  SSH_ME=$HOME/.ssh/id_me
-  if [ -e $SSH_ME ]; then
-    ssh-add $SSH_ME
-  fi
-  SSH_UNI=$HOME/.ssh/id_uni
-  if [ -e $SSH_UNI ]; then
-    ssh-add $SSH_UNI
-  fi
-fi
-
-PROJECT_AUTOINIT=$HOME/projectAutoInit/create.sh
-if [ -e $PROJECT_AUTOINIT ]; then
-  source $PROJECT_AUTOINIT
-fi
-
-clear
-
 neofetch
 
 cd $HOME
@@ -101,8 +79,6 @@ export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git jump colored-man-pages safe-paste zsh-interactive-cd zsh-syntax-highlighting k zsh-autosuggestions)
-
-source $ZSH/oh-my-zsh.sh
 
 # User configuration
 export NPM_CONFIG_PREFIX="$HOME/.npm-global/bin"

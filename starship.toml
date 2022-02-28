@@ -24,3 +24,5 @@ disabled = false
 full_symbol = " "
 charging_symbol = " "
 discharging_symbol = " "
+
+command_timeout = 1000

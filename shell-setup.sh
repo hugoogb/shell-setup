@@ -74,9 +74,11 @@ shell_config() {
   info "Setting up $REPO (bash,zsh,starship,etc)..."
 
   # Link .bashrc
+  rm -rf $HOME/.bashrc # Remove the old config
   cp -fv $HOME/$REPO/.bashrc $HOME/
 
   # Link the zsh and starship prompt
+  rm -rf $HOME/.zshrc # Remove the old config
   cp -fv $HOME/$REPO/.zshrc $HOME/
 
   STARSHIP_DIR=$HOME/.config/starship
@@ -84,6 +86,7 @@ shell_config() {
     mkdir -p $STARSHIP_DIR
   fi
 
+  rm -rf $STARSHIP_DIR/config.toml # Remove the old config
   cp -rfv $HOME/$REPO/starship.toml $HOME/.config/starship/
 }
 

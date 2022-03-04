@@ -1,6 +1,6 @@
-#clear
+clear
 
-#neofetch
+neofetch
 
 #cd $HOME
 
@@ -123,7 +123,7 @@ alias reload="source $HOME/.zshrc"
 # System aliases
 alias distro="cat /etc/*-release | head -1 | tail -1 | cut -d= -f2"
 
-# alias python="python3"
+alias python="python3"
 
 # Custom aliases
 alias show="tree ."
@@ -160,7 +160,7 @@ alias :q="exit"
 
 # git aliases (zsh git plugin)
 # alias g="git"
-# alias gst="git status"
+alias gst="git status"
 # alias ga="git add"
 # alias gc="git commit -v"
 # alias gca="git commit -v -a"

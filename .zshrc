@@ -1,7 +1,5 @@
-clear
-
-neofetch
-
+#clear
+#neofetch
 #cd $HOME
 
 # If you come from bash you might have to change your $PATH.
@@ -81,7 +79,7 @@ export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"
 plugins=(git jump colored-man-pages safe-paste zsh-interactive-cd zsh-syntax-highlighting k zsh-autosuggestions)
 
 # User configuration
-export NPM_CONFIG_PREFIX="$HOME/.npm-global/bin"
+#export NPM_CONFIG_PREFIX="$HOME/.npm-global/bin"
 
 setopt globdots
 
@@ -155,12 +153,12 @@ alias speedtest="curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/m
 
 # Best aliases ever
 alias l="ls -la"
-alias j="jump"
+#alias j="jump"
 alias :q="exit"
 
 # git aliases (zsh git plugin)
 # alias g="git"
-alias gst="git status"
+#alias gst="git status"
 # alias ga="git add"
 # alias gc="git commit -v"
 # alias gca="git commit -v -a"

@@ -66,6 +66,9 @@ python_binary = "python3"
 format = "via [ $version](bold green) "
 disabled = true
 
+[dart]
+symbol = " "
+
 [battery]
 full_symbol = " "
 charging_symbol = " "

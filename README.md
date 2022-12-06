@@ -21,7 +21,7 @@ git clone https://github.com/hugoogb/shell-setup.git ~/shell-setup
 ### Bootstrap script
 
 ```sh
-. ~/shell-setup/shell-setup.sh
+. ~/shell-setup/bootstrap.sh
 ```
 
-If it does not execute you may need to give permissions to the script: `chmod u+x ~/shell-setup/shell-setup.sh`
+If it does not execute you may need to give permissions to the script: `chmod u+x ~/shell-setup/bootstrap.sh`

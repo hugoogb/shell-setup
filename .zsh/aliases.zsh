@@ -6,21 +6,12 @@ alias distro="cat /etc/*-release | head -1 | tail -1 | cut -d= -f2"
 
 alias python="python3"
 
-alias show="tree ."
-alias path="echo -e ${PATH//:/\\::}"
-
-# Network aliases
-alias myip="curl http://ipecho.net/plain; echo"
-alias speedtest="curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python3 -"
-
 alias dir='dir --color=auto'
 alias vdir='vdir --color=auto'
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
  
-#alias ls='ls -lh --color=auto'
-#alias l='ls -la'
 alias ll='lsd -lh --group-dirs=first'
 alias la='lsd -a --group-dirs=first'
 alias l='lsd --group-dirs=first'
@@ -36,11 +27,6 @@ alias ..='cd ..'
 alias ghk='cat ~/.github-Pat'
 alias ghkc='catn ~/.github-Pat | head -3  | tail -1 | tr -d "\n" | clip.exe'
 alias ghkc2='catn ~/.github-Pat | head -8  | tail -1 | tr -d "\n" | clip.exe'
-
-alias uni='cd /mnt/d/uni'
-alias unil='cd /mnt/c/uni'
-
-alias dev='cd /mnt/d/dev'
 
 alias :q="exit"
 alias :wq='exit'

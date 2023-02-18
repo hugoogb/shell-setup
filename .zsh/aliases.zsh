@@ -25,7 +25,7 @@ alias catnl='bat --paging=never'
 alias ..='cd ..'
 
 alias ghk='cat ~/.github-Pat'
-alias ghkc='catn ~/.github-Pat | head -3  | tail -1 | tr -d "\n" | xclip'
+alias ghkc='catn ~/.github-Pat | head -3  | tail -1 | tr -d "\n" | xclip -sel clip'
 
 alias :q="exit"
 alias :wq='exit'

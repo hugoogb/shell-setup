@@ -113,6 +113,11 @@ useful_apps() {
     else
       warn "~/.fzf already exists"
     fi
+
+    # pnpm (performant npm)
+    curl -fsSL https://get.pnpm.io/install.sh | sh -
+    # nvm (node version manager)
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
 }
 
 # Linking dotfiles

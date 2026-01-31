@@ -5,11 +5,6 @@ format = """\
 [╭╴](238) [{](bold #ffd08e)[ H ](bold #ff9001)[}](bold #ffd08e) on $env_var\
 $all[╰─](238)$character"""
 
-format = """
- $os$directory$git_branch$git_status$docker_context$python
-$character
-"""
-
 # ────────────────── Prompt character ──────────────────
 [character]
 success_symbol = "[❯](bold green)"

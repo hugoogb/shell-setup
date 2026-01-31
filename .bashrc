@@ -1,5 +1,4 @@
-# WSL2 Optimizations
-export NODE_OPTIONS="--max-old-space-size=4096"
+[[ -f ~/.zshenv ]] && source ~/.zshenv
 
 # Context specific aliases for Claude Code
 alias claude-debug="claude --append-system-prompt 'Focus on debugging. Add extensive logging.'"
